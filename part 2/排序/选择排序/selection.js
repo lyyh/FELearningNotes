@@ -4,7 +4,7 @@ let swap = (v1,v2,context) => {
     [context[v1],context[v2]] = [context[v2],context[v1]];
 }
 
-let selection = (arr) => {
+let selection = arr => {
     let len = arr.length;
     // 用于保存最小值的索引
     let minIndex = 0; 
