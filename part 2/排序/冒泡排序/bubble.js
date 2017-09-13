@@ -21,23 +21,23 @@ let bubble = arr => {
     return arr;
 }
 
-// 优化方案，设一个flag，如果未发生元素交换则证明该序列有序
+// 优化方案，设一个exchange，如果未发生元素交换则证明该序列有序
 let betterBubble = arr => {
     let len = arr.length;
     let count = 0;
     // 比较趟数 len - 1 趟，最后一趟不用比较
     for (let i = 0; i < len - 1; i++) {
         count++;
-        // 设置一个flag
-        let flag = false;
+        // 设置一个exchange
+        let exchange = false;
         // 每趟比较次数 len - i -1
         for (let j = 0; j < len - i - 1; j++) {
             if (arr[j] > arr[j + 1]) {
                 swap(j, j + 1, arr)
-                flag = true;
+                exchange = true;
             }
         }
-        if(!flag){
+        if(!exchange){
             break;
         }
     }

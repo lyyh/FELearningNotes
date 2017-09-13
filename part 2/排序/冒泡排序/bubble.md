@@ -10,3 +10,29 @@
 ### Best Cases 与 Worst Cases
 Best Cases: 当输入的数据已经是正序时
 Worst Cases: 当输入的数据是反序时
+
+### 利用在每趟排序中进行正向和反向两遍冒泡的方法一次可以得到两个最终值(最大者和最小者) ，从而时排序趟数减少一半
+```
+void Bubble_2 ( int r[], int n){  
+    int low = 0;   
+    int high= n -1; //设置变量的初始值  
+    int tmp,j;  
+    while (low < high) {  
+        for (j= low; j< high; ++j) //正向冒泡,找到最大者  
+            if (r[j]> r[j+1]) {  
+                tmp = r[j]; r[j]=r[j+1];r[j+1]=tmp;  
+            }   
+        --high;                 //修改high值, 前移一位  
+        for ( j=high; j>low; --j) //反向冒泡,找到最小者  
+            if (r[j]<r[j-1]) {  
+                tmp = r[j]; r[j]=r[j-1];r[j-1]=tmp;  
+            }  
+        ++low;                  //修改low值,后移一位  
+    }   
+}   
+```
+
+### 从1000个数中找到最大的数
+使用冒泡排序，可以在一趟排序操作中找到最大的一个值
+
+
