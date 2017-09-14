@@ -1,5 +1,5 @@
 // es6
-let sourceArr = [6, 2, 3, 4, 5];
+let sourceArr = [6, 2, 4, 3, 5];
 let swap = (v1, v2, context) => {
     [context[v1], context[v2]] = [context[v2], context[v1]];
 }
@@ -17,7 +17,7 @@ let bubble = arr => {
             }
         }
     }
-    console.log('比较趟数',count);
+    console.log('比较趟数', count);
     return arr;
 }
 
@@ -37,15 +37,35 @@ let betterBubble = arr => {
                 exchange = true;
             }
         }
-        if(!exchange){
+        if (!exchange) {
             break;
         }
+    }
+    console.log('比较趟数', count);
+    return arr;
+}
+
+// 记录交换记录
+let posBubble = arr => {
+    let len = arr.length;
+    let i = len - 1;
+    let pos = 0;
+    let count = 0;
+    while (i > 0) {
+        count++;
+        for (let j = 0; j < i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                console.log(j);
+                // 记录最后一次交换数据的位置
+                pos = j;
+                swap(j, j + 1, arr);
+            }
+        }
+        if(i == pos){
+            break;
+        }
+        i = pos;
     }
     console.log('比较趟数',count);
     return arr;
 }
-
-betterBubble(sourceArr);
-bubble(sourceArr);
-
-
