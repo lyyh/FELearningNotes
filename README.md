@@ -8,9 +8,12 @@
 -   Algorithm(算法)
     - 排序
         - [选择排序](https://github.com/lyyh/FELearningNotes/blob/master/part%202/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/selection.js)  
-        - [冒泡排序]
-        选择排序及冒泡排序需要比较的趟数
+        - [冒泡排序](https://github.com/lyyh/FELearningNotes/tree/master/part%202/%E6%8E%92%E5%BA%8F/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F)  
+        - [插入排序](https://github.com/lyyh/FELearningNotes/tree/master/part%202/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)  
+
     - 笔试题
         - [求两个区间的是否有交集]
-        - 
+        -
 
+        选择排序及冒泡排序需要比较的趟数 
+    
