@@ -1,49 +1,39 @@
-//es6
-let insertion = arr => {
+// 非递归方式
+let binarySearch = (arr, data) => {
     let len = arr.length;
-    let preIndex, current; // preIndex前一个元素的索引（哨兵）,current当前元素
-    for (var i = 1; i < len - 1; i++) {
-        current = arr[i];
-        preIndex = i - 1;
-        // 依次把当前元素和前面的元素进行比较
-        while (preIndex >= 0 && arr[preIndex] > current) {
-            arr[preIndex + 1] = arr[preIndex];
-            preIndex--;
-        }
-        // 插入当前元素到合适的位置
-        arr[preIndex + 1] = current;
-    }
-    return arr;
-}
-
-//二分查找插入位置
-let binarySearch = (start, end, arr, data) => {
-    while (start <= end) {
-        let middle = Math.floor((start + end) / 2);
-        let middleData = arr[middle];
-        if (middleData > data){
-            end = middle - 1;
-        }
-        else{
-            start = middle + 1;
+    let low = 0;
+    let high = len - 1;
+    let middle;
+    while (low <= high) {
+        middle = parseInt((low + high) / 2);
+        if (arr[middle] < data) {
+            low = middle + 1;
+        } else if (arr[middle] < data) {
+            high = middle - 1;
+        } else {
+            return middle;
         }
     }
-    return start;
 }
 
-let insertionBinary = arr => {
-    let len = arr.length;
-    for (let i = 1; i < len; i++) {
-        if (arr[i] < arr[i - 1]) {
-            let current = arr[i];
-            let insertIndex = binarySearch(0, i, arr, arr[i]);
-            for(let j = i -1 ;j >= insertIndex;j--){
-                arr[j+1] = arr[j];
-            }
-            arr[insertIndex] = current;
-        }
+// 递归算法
+let reBinarySearch = (arr, lowArg, highArg, data) => {
+    let low = lowArg || 0;
+    let high = highArg || arr.length - 1;
+    if (low > high) {
+        return -1;
     }
-    return arr;
+    let mid = parseInt((low + high) / 2);
+    if (arr[mid] < data) {
+        low = mid + 1;
+        return reBinarySearch(arr, low, high, data);
+    } else if (arr[mid] > data) {
+        high = mid - 1;
+        return reBinarySearch(arr, low, high, data);
+    } else {
+        return mid;
+    }
 }
 
-console.log(insertionBinary([2,3,1,1,4]));
+// console.log(binarySearch([1, 2, 3, 5, 6], 5));
+console.log(reBinarySearch([1, 2, 3, 5, 6], 0, 4, 5));
