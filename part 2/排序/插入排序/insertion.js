@@ -21,14 +21,14 @@ let binarySearch = (start, end, arr, data) => {
     while (start <= end) {
         let middle = Math.floor((start + end) / 2);
         let middleData = arr[middle];
-        if (middleData < data) {
-            start = middle + 1;
-        } else if (middleData > data) {
+        if (middleData > data){
             end = middle - 1;
-        } else {
-            return middle;
+        }
+        else{
+            start = middle + 1;
         }
     }
+    return start;
 }
 
 let insertionBinary = arr => {
@@ -37,12 +37,13 @@ let insertionBinary = arr => {
         if (arr[i] < arr[i - 1]) {
             let current = arr[i];
             let insertIndex = binarySearch(0, i, arr, arr[i]);
-            for(let j = insertIndex;j <= i - 1;j++){
+            for(let j = i -1 ;j >= insertIndex;j--){
                 arr[j+1] = arr[j];
             }
             arr[insertIndex] = current;
         }
     }
+    return arr;
 }
 
-console.log(insertionBinary([2,3,1,1,4]));
+// console.log(insertionBinary([2,3,1,1,4]));
