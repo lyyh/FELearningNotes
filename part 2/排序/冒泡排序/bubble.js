@@ -55,7 +55,6 @@ let posBubble = arr => {
         count++;
         for (let j = 0; j < i; j++) {
             if (arr[j] > arr[j + 1]) {
-                console.log(j);
                 // 记录最后一次交换数据的位置
                 pos = j;
                 swap(j, j + 1, arr);
