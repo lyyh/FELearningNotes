@@ -33,4 +33,9 @@
 
 ## 第五部分
 -   开发性问题  
-    [一个优秀的前端工程师应该具备的技能](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E4%B8%80%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%BA%94%E8%AF%A5%E5%85%B7%E5%A4%87%E5%93%AA%E4%BA%9B%E6%8A%80%E8%83%BD.md)
+    -   [一个优秀的前端工程师应该具备的技能](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E4%B8%80%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%BA%94%E8%AF%A5%E5%85%B7%E5%A4%87%E5%93%AA%E4%BA%9B%E6%8A%80%E8%83%BD.md)  
+    -   [怎么选择框架](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E5%AF%B9%E5%BA%94%E6%A1%86%E6%9E%B6%EF%BC%8C%E6%80%8E%E4%B9%88%E9%80%89%E6%8B%A9.md)
+    -   [你有什么能力能胜任这份工作](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E4%BD%A0%E6%9C%89%E4%BB%80%E4%B9%88%E8%83%BD%E5%8A%9B%E8%83%9C%E4%BB%BB%E8%BF%99%E4%BB%BD%E5%B7%A5%E4%BD%9C.md)
+    -   [设计一个web站点](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AAweb%E7%AB%99%E7%82%B9.md)  
+    -   [jquery特点](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/jquery%08%08%E7%89%B9%E7%82%B9.md)  
+    
