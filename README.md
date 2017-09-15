@@ -3,8 +3,10 @@
 -   h5 api  
     [history pushState 学习](https://github.com/lyyh/FELearningNotes/blob/master/part%201/h5%20api/h5%20history.md)
 -   h5 标签
-
+-   js api
+    -   [getBoundClientRect]
 ## 第二部分
+-   数据结构
 -   Algorithm(算法)
     - 排序
         - [选择排序](https://github.com/lyyh/FELearningNotes/blob/master/part%202/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/selection.js)  
@@ -17,6 +19,14 @@
         - [二分查找](https://github.com/lyyh/FELearningNotes/tree/master/part%202/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%08%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)  
         
 ## 第三部分
--   前端性能优化
-    -   [前端性能优化之加载技术](https://github.com/lyyh/FELearningNotes/blob/master/part%204/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8B%E5%8A%A0%E8%BD%BD%E6%8A%80%E6%9C%AF.md)  
+-   前端性能优化  
+    -   [前端性能优化之加载技术](https://github.com/lyyh/FELearningNotes/blob/master/part%204/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8B%E5%8A%A0%E8%BD%BD%E6%8A%80%E6%9C%AF.md)   
+-   计算机网络  
+-   前端安全  
+-   前端高级技巧  
+    -   函数节流  
+
+## 第四部分
+-   前端高级技巧  
+    -   函数节流  
     
