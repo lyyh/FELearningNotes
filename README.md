@@ -24,6 +24,8 @@
 -   计算机网络  
     -   [ajax通信](https://github.com/lyyh/FELearningNotes/blob/master/part%203/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ajax/xmlHttpRequest.md)  
     -   [sokcet套接字](https://github.com/lyyh/FELearningNotes/blob/master/part%203/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/socket/socket.md)  
+    -   [tcp三次握手]()
+    -   [tcp四次挥手]()
 -   前端安全  
 
 ## 第四部分
@@ -38,4 +40,3 @@
     -   [你有什么能力能胜任这份工作](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E4%BD%A0%E6%9C%89%E4%BB%80%E4%B9%88%E8%83%BD%E5%8A%9B%E8%83%9C%E4%BB%BB%E8%BF%99%E4%BB%BD%E5%B7%A5%E4%BD%9C.md)
     -   [设计一个web站点](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AAweb%E7%AB%99%E7%82%B9.md)  
     -   [jquery特点](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/jquery%08%08%E7%89%B9%E7%82%B9.md)  
-    
