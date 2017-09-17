@@ -43,3 +43,7 @@
     -   [你有什么能力能胜任这份工作](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E4%BD%A0%E6%9C%89%E4%BB%80%E4%B9%88%E8%83%BD%E5%8A%9B%E8%83%9C%E4%BB%BB%E8%BF%99%E4%BB%BD%E5%B7%A5%E4%BD%9C.md)
     -   [设计一个web站点](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AAweb%E7%AB%99%E7%82%B9.md)  
     -   [jquery特点](https://github.com/lyyh/FELearningNotes/blob/master/part%205/%E5%BC%80%E6%94%BE%E6%80%A7%E9%97%AE%E9%A2%98/jquery%08%08%E7%89%B9%E7%82%B9.md)  
+## 第六部分
+-   面试题
+    -   [为什么子类的原型要指向父类的实例而不是父类的原型](https://github.com/lyyh/FELearningNotes/blob/master/part%206/%E9%9D%A2%E8%AF%95%E9%A2%98/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%90%E7%B1%BB%E7%9A%84%E5%8E%9F%E5%9E%8B%E8%A6%81%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB%E7%9A%84%E5%AE%9E%E4%BE%8B%E8%80%8C%E4%B8%8D%E6%98%AF%E7%88%B6%E7%B1%BB%E7%9A%84%E5%8E%9F%E5%9E%8B.md)  
+    
