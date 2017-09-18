@@ -58,12 +58,15 @@ Pragma > Cache-control > Expires
 -    ETag 可以更加精确的判断资源是否被修改，可以识别一秒内多次修改的情况。分布式服务器存储的情况下，计算ETag的算法如果不一样，会导致浏览器从一台服务器上获得页面内容后到另外一台服务器上进行验证时发现ETag不匹配的情况。  
 
 ## 缓存实践  
+对于所有可缓存资源，指定一个Expires或Cache-Control max-age以及一个Last-Modified或ETag至关重要。同时使用前者和后者可以很好的相互适应。
+前者不需要每次都发起一次请求来校验资源时效性，后者保证当资源未出现修改的时候不需要重新发送该资源  
 
 ## 结论
-需要兼容HTTP1.0的时候需要使用Expires，不然可以考虑直接使用Cache-Control
-需要处理一秒内多次修改的情况，或者其他Last-Modified处理不了的情况，才使用ETag，否则使用Last-Modified。
-对于所有可缓存资源，需要指定一个Expires或Cache-Control，同时指定Last-Modified或者Etag。
-可以通过标识文件版本名、加长缓存时间的方式来减少304响应。
+-   需要兼容HTTP1.0的时候需要使用Expires，不然可以考虑直接使用Cache-Control
+-   需要处理一秒内多次修改的情况，或者其他Last-Modified处理不了的情况，才使用ETag，否则使用Last-Modified。
+-   对于所有可缓存资源，需要指定一个Expires或Cache-Control，同时指定Last-Modified或者Etag。
+-   可以通过标识文件版本名、加长缓存时间的方式来减少304响应。
+-   Last-Moidfied用If-Modified-Since请求头来检验，ETag用if-None-Match请求头来检验  
 
 ## 参考资料
 [http缓存控制小结](http://www.imweb.io/topic/5795dcb6fb312541492eda8c)
