@@ -7,6 +7,7 @@
     -   [getBoundClientRect](https://github.com/lyyh/FELearningNotes/blob/master/part%201/js%20api/getBoundingClientRect/getBoundingClientRect.md)
 ## 第二部分
 -   数据结构
+    -   [二叉树](https://github.com/lyyh/FELearningNotes/blob/master/part%202/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E4%BA%8C%E5%8F%89%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91.js)  
 -   Algorithm(算法)
     - 排序
         - [选择排序](https://github.com/lyyh/FELearningNotes/blob/master/part%202/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/selection.js)  
