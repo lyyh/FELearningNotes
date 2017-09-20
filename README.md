@@ -35,6 +35,9 @@
 ## 第四部分
 -   前端高级技巧  
     -   [函数节流](https://github.com/lyyh/FELearningNotes/tree/master/part%204/%E5%89%8D%E7%AB%AF%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81)
+-   前端跨域
+    -   [前端跨域整理](https://github.com/lyyh/FELearningNotes/blob/master/part%204/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E6%95%B4%E7%90%86.md)  
+    -   [CORS](https://github.com/lyyh/FELearningNotes/blob/master/part%204/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F/CORS.md)
     
 
 ## 第五部分
