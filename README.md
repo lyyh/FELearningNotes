@@ -1,13 +1,24 @@
 # LearningNotes
 ## 第一部分
+-   基础知识
+    -   [盒子模型](https://github.com/lyyh/FELearningNotes/blob/master/part%201/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.md)  
+    -   [js堆与栈]()
+    -   [new运算](https://github.com/lyyh/FELearningNotes/blob/master/part%201/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/new%E8%BF%90%E7%AE%97/new%E8%BF%90%E7%AE%97.md)  
+-   css
 -   h5 api  
     [history pushState 学习](https://github.com/lyyh/FELearningNotes/blob/master/part%201/h5%20api/h5%20history.md)
 -   h5 标签
 -   js api
     -   [getBoundClientRect](https://github.com/lyyh/FELearningNotes/blob/master/part%201/js%20api/getBoundingClientRect/getBoundingClientRect.md)
+-   js 堆与栈
+-   vue
+    -   [vue生命周期](https://github.com/lyyh/FELearningNotes/blob/master/part%201/vue/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)  
+    -   [vue实例](https://github.com/lyyh/FELearningNotes/blob/master/part%201/vue/vue%E5%AE%9E%E4%BE%8B.md)  
 ## 第二部分
 -   数据结构
-    -   [二叉树](https://github.com/lyyh/FELearningNotes/blob/master/part%202/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E4%BA%8C%E5%8F%89%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91.js)  
+    -   [二叉树](https://github.com/lyyh/FELearningNotes/blob/master/part%202/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E4%BA%8C%E5%8F%89%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91.js)   
+    -   最小堆与最大堆
+    -   
 -   Algorithm(算法)
     - 排序
         - [选择排序](https://github.com/lyyh/FELearningNotes/blob/master/part%202/%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/selection.js)  
