@@ -5,11 +5,13 @@
     -   [js堆与栈]()
     -   [new运算](https://github.com/lyyh/FELearningNotes/blob/master/part%201/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/new%E8%BF%90%E7%AE%97/new%E8%BF%90%E7%AE%97.md)  
 -   css
+    -   [水平垂直居中](https://github.com/lyyh/FELearningNotes/blob/master/part%201/css/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.md)
 -   h5 api  
     [history pushState 学习](https://github.com/lyyh/FELearningNotes/blob/master/part%201/h5%20api/h5%20history.md)
 -   h5 标签
 -   js api
-    -   [getBoundClientRect](https://github.com/lyyh/FELearningNotes/blob/master/part%201/js%20api/getBoundingClientRect/getBoundingClientRect.md)
+    -   [getBoundClientRect](https://github.com/lyyh/FELearningNotes/blob/master/part%201/js%20api/getBoundingClientRect)
+    -   [获取元素位置](https://github.com/lyyh/FELearningNotes/blob/master/part%201/js%20api/%E8%8E%B7%E5%8F%96%08%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE/%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E4%BD%8D%E7%BD%AE.md)  
 -   js 堆与栈
 -   vue
     -   [vue生命周期](https://github.com/lyyh/FELearningNotes/blob/master/part%201/vue/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)  
@@ -26,9 +28,10 @@
         - [插入排序](https://github.com/lyyh/FELearningNotes/tree/master/part%202/%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)    
         - [快速排序](https://github.com/lyyh/FELearningNotes/tree/master/part%202/%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F)
 
-    - 笔试题
+    - 面试算法
         - [求两个区间的是否有交集](https://github.com/lyyh/FELearningNotes/blob/master/part%202/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E5%8C%BA%E9%97%B4%E4%BA%A4%E9%9B%86/intersection.md)   
         - [二分查找](https://github.com/lyyh/FELearningNotes/tree/master/part%202/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%08%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)  
+        -   [从100万个数中取出最大的100个数](https://github.com/lyyh/FELearningNotes/tree/master/part%202/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95/%E4%BB%8E100%E4%B8%87%E4%B8%AA%E6%95%B0%E4%B8%AD%E5%8F%96%E5%87%BA%E6%9C%80%E5%A4%A7%E7%9A%84100%E4%B8%AA%E6%95%B0)
         
 ## 第三部分
 -   前端性能优化  
