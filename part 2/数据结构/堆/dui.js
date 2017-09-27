@@ -44,17 +44,29 @@ Heap.prototype = {
             return null;
         }
         var index = 0;
-        var baseValue = heap[nIndex];
+        var baseValue = heap[index];
         var maxIndex = heap.length - 1;
         var popValue = heap.pop();
         heap[index] = popValue;
         while (index < maxIndex) {
             var leftIndex = (index + 1) * 2 - 1;
-            var rightIndex = (index + 1) *2;
+            var rightIndex = (index + 1) * 2;
             var selectIndex = leftIndex;
+            if (rightIndex < maxIndex) { 
+                selectIndex = (this.data[leftIndex] > this.data[rightIndex]) ? rightIndex : leftIndex; 
+            }  
+            if (selectIndex < maxIndex && this.data[index] > this.data[selectIndex]) { 
+                var temp = this.data[index]; 
+                this.data[index] = this.data[selectIndex]; 
+                this.data[selectIndex] = temp; 
+            }  
+            index = selectIndex; 
         }
+        return baseValue;
     }
 }
 var heapInit = new Heap();
 var ret = heapInit.build([3, 2, 1, 4]);
 console.log(ret);
+heapInit.delete();
+console.log(heapInit.data);
