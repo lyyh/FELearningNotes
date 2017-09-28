@@ -20,6 +20,7 @@ Heap.prototype = {
     },
     //  插入
     //  每个元素压入栈顶，对当前栈进行最小堆排序
+    //  每次找到一个元素的父节点，比较与父节点的大小，进行替换
     insert: function (value) {
         if (!this.data instanceof Array) {
             this.data = [];
@@ -42,6 +43,7 @@ Heap.prototype = {
     },
     // 删除最大的节点
     // 取出栈顶元素，替换到栈底，然后进行最小堆排序
+    // 栈顶和栈底方便操作，目的是删除栈底元素，进行重新排序
     delete: function () {
         var heap = this.data;
         if (!this.data instanceof Array) {
@@ -56,9 +58,12 @@ Heap.prototype = {
             var leftIndex = (index + 1) * 2 - 1;
             var rightIndex = (index + 1) * 2;
             var selectIndex = leftIndex;
+            //  父节点与子节点对比，选出最小的一个节点，放在顶部
+            // 选择小的节点
             if (rightIndex < maxIndex) { 
                 selectIndex = (this.data[leftIndex] > this.data[rightIndex]) ? rightIndex : leftIndex; 
             }  
+            //  父节点与子节点进行比较、替换
             if (selectIndex < maxIndex && this.data[index] > this.data[selectIndex]) { 
                 var temp = this.data[index]; 
                 this.data[index] = this.data[selectIndex]; 
