@@ -4,7 +4,8 @@ function Heap() {
     this.data = [];
 }
 Heap.prototype = {
-    // 创建
+    //  创建堆
+    //  初始化data数组对象，遍历传入的数组，将其中每个元素插入到初始化后的data数组对象
     build: function (datas) {
         // 初始化
         this.data = [];
@@ -17,7 +18,8 @@ Heap.prototype = {
         }
         return true;
     },
-    // 插入
+    //  插入
+    //  每个元素压入栈顶，对当前栈进行最小堆排序
     insert: function (value) {
         if (!this.data instanceof Array) {
             this.data = [];
@@ -39,6 +41,7 @@ Heap.prototype = {
         return heap;
     },
     // 删除最大的节点
+    // 取出栈顶元素，替换到栈底，然后进行最小堆排序
     delete: function () {
         var heap = this.data;
         if (!this.data instanceof Array) {
@@ -65,6 +68,7 @@ Heap.prototype = {
         }
         return baseValue;
     },
+    //  将传入的数值替换栈底第一个元素，然后进行最小堆排序
     replace: function(value){
         var heap = this.data;
         if (!this.data instanceof Array) {
@@ -88,12 +92,14 @@ Heap.prototype = {
             index = selectIndex; 
         }
     },
+    //  得到Top100
     getMaxGroup: function(leftData){
         var heap = this.data;
         var context = this;
         leftData.forEach(function(el){
             context.replace(el);
         });
+        return heap;
     },
     getData: function(){
         return this.data;
@@ -109,8 +115,8 @@ function test() {
     var leftData = repo.slice(100);
     var heap = new Heap();
     heap.build(initData);
-    heap.getMaxGroup(leftData);
-    console.log(heap.getData());
+    var maxHeap = heap.getMaxGroup(leftData);
+    console.log(maxHeap);
 }
 test();
 
