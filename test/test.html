@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        <style>
-            .fl{
-                width: 100px;
-                background-color: red; 
-                /*font-size: 13px;  */
-            }
-            .box{
-                width: 50px;
-                height: 50px;
-                background-color: black;
-                float: left;
-            }
-            .ft{
-                font-size: 14px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='fl'>
-            <div class='ft'>12312</div>
-            <div class='box'>
-                
-            </div>
-        </div>
-    </body>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .fl {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*font-size: 13px;  */
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            float: left;
+        }
+
+        .ft {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class='box' draggable="true">
+    </div>
+    <div class='fl'>
+        <div class='ft'>12312</div>
+    </div>
+    <div class="dragElement">123123</div>
+    <script>
+        var dragElement = document.querySelector('.box');
+        dragElement.ondragstart=function(ev){
+ ev.dataTransfer.effectAllowed = "move";
+             ev.dataTransfer.setData("text", ev.target.innerHTML);
+            ev.dataTransfer.setDragImage(ev.target, 0, 0);
+            console.log(ev);
+        }
+        dragElement.addEventListener('drag',function(e){
+            
+            ev.dataTransfer.effectAllowed = "move";
+             ev.dataTransfer.setData("text", ev.target.innerHTML);
+            ev.dataTransfer.setDragImage(ev.target, 0, 0);
+            console.log(e);
+        });
+    </script>
+</body>
+
 </html>
