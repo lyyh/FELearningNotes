@@ -37,7 +37,13 @@
 信任CA，通过安全的的方式获取他们的公钥。这些ＣＡ本身也有证书来证明自己的身份，并且ＣＡ的信用是像树一样分级的，高层的ＣＡ给底层的ＣＡ做信用背书，而操作系统／浏览器中会内置一些顶层的ＣＡ的证书，相当于你自动信任了他们。　这些顶层的ＣＡ证书一定得安全地放入操作系统／浏览器当中，否则世界大乱。  
 
 ###  https流程图
-![](http://mmbiz.qpic.cn/mmbiz_png/KyXfCrME6UJFk4ma5Y5g5wIeggZaCZ3xKYfzxv54kPQ9q9SKRPHpnVib9MF6MfPcLJgej3wicCVZSicUMNzoVasiaA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+-   浏览器发出安全请求(https...)  
+-   服务器发送数字证书(包含服务器的public key)  
+-   浏览器用预置的CA列表验证证书，如有问题，则提示有风险  
+-   浏览器生产随机的对称密钥，用服务器的public key加密  
+-   服务器用自己的private key进行解密，得到对称密钥  
+-   双发都知道了对称密钥，用它来进行加密通信  
+
 
 
 
