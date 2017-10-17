@@ -8,14 +8,14 @@ let binarySearch = (arr, data) => {
         middle = parseInt((low + high) / 2);
         if (arr[middle] < data) {
             low = middle + 1;
-        } else if (arr[middle] < data) {
+        } else if (arr[middle] > data) {
             high = middle - 1;
         } else {
             return middle;
         }
     }
 }
-
+ 
 // 递归算法
 let reBinarySearch = (arr, lowArg, highArg, data) => {
     let low = lowArg || 0;

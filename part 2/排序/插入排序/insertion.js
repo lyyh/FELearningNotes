@@ -24,8 +24,10 @@ let binarySearch = (start, end, arr, data) => {
         if (middleData > data){
             end = middle - 1;
         }
-        else{
+        else if(middleData < data){
             start = middle + 1;
+        }else{
+            return middle;
         }
     }
     return start;
@@ -46,4 +48,4 @@ let insertionBinary = arr => {
     return arr;
 }
 
-// console.log(insertionBinary([2,3,1,1,4]));
+console.log(insertionBinary([2,3,1,1,4]));

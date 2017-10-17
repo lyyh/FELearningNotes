@@ -29,7 +29,7 @@ console.log(quick([2,1,3,5,2,1,6]));
 let localQuick = (arr, start, end) => {
     if(end - start > 1){
         let mid = divider(arr,start,end);
-        localQuick(arr,start,mid);
+        localQuick(arr,start,mid-1);
         localQuick(arr,mid+1,end);
     }
     return arr;
@@ -61,3 +61,4 @@ let divider = (arr, start, end) => {
     return start;
 }
 
+console.log(localQuick([2,1,3,6,3,2,7,4],0,7));
