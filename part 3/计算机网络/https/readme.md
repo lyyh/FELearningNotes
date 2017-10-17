@@ -37,7 +37,7 @@
 信任CA，通过安全的的方式获取他们的公钥。这些ＣＡ本身也有证书来证明自己的身份，并且ＣＡ的信用是像树一样分级的，高层的ＣＡ给底层的ＣＡ做信用背书，而操作系统／浏览器中会内置一些顶层的ＣＡ的证书，相当于你自动信任了他们。　这些顶层的ＣＡ证书一定得安全地放入操作系统／浏览器当中，否则世界大乱。  
 
 ###  https流程图
-![](https://github.com/lyyh/FELearningNotes/blob/master/public/images/part%203/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/https_establish.png)
+![](https://github.com/lyyh/FELearningNotes/blob/master/public/images/part%203/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/htts_establish.png)
 
 
 
