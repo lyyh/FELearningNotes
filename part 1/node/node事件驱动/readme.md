@@ -16,6 +16,7 @@
 -   await命令后面，可以是Promise 对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。  
 
 -   async返回值是Promise对象，可以用then命令指定下一步操作  
+-   可以使用try/catch来对异步中的异常进行捕获  
 
 ## EventEmitter
 -   EventEmitter是促进Node中对象之间交流的模块，它是Node异步事件驱动机制的核心,Node中很多自带的模块都继承自事件触发模块。  
