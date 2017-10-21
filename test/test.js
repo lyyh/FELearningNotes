@@ -1,12 +1,6 @@
-
-
-setImmediate(function(){
-    console.log('setImmediate');
-})
-setTimeout(function(){
-    console.log('setTimeout');
-},0);
-process.nextTick(function(){
-    console.log('nextTickQueue');
-})
-console.log('execute main');
+var pro1 = Promise.resolve('pro1');
+console.log(pro1);
+// console.log('123');
+var pro2 = new Promise(function(resolve,reject){
+    console.log('pro2');
+});
