@@ -10,6 +10,8 @@
 
 ## process.nextTick
 -   每次调用process.nextTick方法，只会将回调函数放入队列中，下一轮Tick时取出执行  
+-   在事件循环的当前阶段立即生效  
+-   在接下来的迭代或者事件循环的下一次tick生效   
 
 ## setImmediate与process.nextTick
 -   优先级：process.nextTick > setImmediate。事件循环对观察者的检查是有先后顺序的，process.nextTick为idle观察者，setTimmediate为check观察者，idle观察者 > IO观察者 > check观察者。  
