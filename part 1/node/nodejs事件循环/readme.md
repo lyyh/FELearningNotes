@@ -46,8 +46,13 @@ windows下循环基于IOCP创建，*inux下基于多线程创建
 -   一种从js发起调用到内核执行完IO操作的存在一种中间产物，请求对象。  
 -   异步IO过程中的重要产物，所有状态都保存在这个产物中，包括回调函数
 
-### 底层调用
+### Node.js结构
 从js调用Node核心模块，核心模块调用C++内建模块，内建模块通过libuv进行系统调用  
+
+#### libuv
+为 Node.js 提供了跨平台，线程池，事件池，异步 I/O 等能力，是 Node.js 如此强大的关键。    
+Node.js 虽然说是用的 Javascript，但只是在开发时使用 Javascript 的语法来编写程序。真正的执行过程还是由 V8 将 Javascript 解释，然后由 C/C++ 来执行真正的系统调用，所以并不需要过分担心 Javascript 执行效率的问题。可以看出，Node.js 并不是一门语言，而是一个 平台，这点一定要分清楚。  
+
 
 ### 执行回调
 -   第一部分：组装好请求对象，送入IO线程池中等待执行
@@ -57,6 +62,10 @@ windows下循环基于IOCP创建，*inux下基于多线程创建
 ### 小结
 -   js是单线程的，Node是多线程的，除了用户代码无法并行执行外，所有的IO(网络IO和磁盘IO)都是并行执行的
 
+### 参考资料
+[Nodejs探秘](http://taobaofed.org/blog/2015/10/29/deep-into-node-1/)  
+[事件循环](http://www.cnblogs.com/jasonxuli/p/6074231.html)  
+[Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
 
 
 
