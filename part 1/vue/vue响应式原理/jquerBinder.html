@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <input type="text" data-bind-text='name'>
+        <script>
+            function DataBind(targetId){
+                var pubSub = $({});
+                var dataAttr = 'bind-'+targetId;
+                var message = targetId+':change';
+                $(document).on('change','data-'+dataAttr,function(e){
+                    var $input = $(this);
+                    public.trigger(message,[$input.data(dataAttr),$input.val()]);
+                })
+                pubSub.on(message,function(evt,propName,newVal){
+                    $('[data-'+dataAttr+'='+propName+']').each(function(){
+                        $context = $(this);
+                        if($context.is('input,text,area,select')){
+                            $context.val(newVal);
+                        }else{
+                            $context.html(newVal);
+                        }
+                    })
+                })
+                return pubSub;
+            }
+
+            function User(uid){
+                var binder = new DataBind(uid);
+                var user = {
+                        attribute:{},
+                        set:function(attrName,value){
+                            this.attribute[attrName] = value;
+                            this._binder.trigger(uid+':change',[attrName,value]);
+                        },
+                        get:function(attrName){
+                            return this.attribute[attrName];
+                        },
+                        _binder:binder
+                    }
+                return user;
+            }
+
+            var user = new User('text');
+            user.set('name',123);
+
+        </script>
+    </body>
+</html>

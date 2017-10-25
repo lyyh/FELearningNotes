@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <input type="text" data-bind-text='name'>
+    <script>
+        function DataBinder(objId) {
+            var pubSub = {
+                callbacks: {},
+                on: function (msg, callback) {
+                    this.callbacks[msg] = this.callbacks[msg] || [];
+                    this.callbacks[msg].push(callback);
+                },
+                publish: function (msg) {
+                    var argvs = Array.prototype.slice.call(arguments,1);
+                    this.callbacks[msg] = this.callbacks[msg] || [];
+                    for (var i = 0, len = this.callbacks[msg].length; i < len; i++) {
+                        this.callbacks[msg][i].apply(this, argvs);
+                    }
+                }
+            }
+
+            var dataAttr = 'data-bind-' + objId;
+            var message = objId + ':change';
+
+            var changeHandler = function (e) {
+                var e = e || window.event;
+                var target = e.target || e.srcElement;
+                var propName = target.getAttribute(dataAttr);
+                if (propName && propName != '') {
+                    pubSub.publish(message, propName, target.value);
+                }
+            }
+            //监听变化事件并代理到PubSub 
+            if (document.addEventListener) {
+                document.addEventListener("change", changeHandler, false);
+            } else {
+                //IE8使用attachEvent而不是addEventListener     
+                document.attachEvent("onchange", changeHandler);
+            }
+
+            pubSub.on(message, function (propName, newVal) {
+                var dataAttribute = dataAttr;
+                var elements = document.querySelectorAll('[' + dataAttribute + '=' + propName + ']');
+                var tagName;
+                for (var i = 0, len = elements.length; i < len; i++) {
+                    tagName = elements[i].tagName.toLocaleLowerCase();
+                    if (tagName == 'input' || tagName == 'textarea' || tagName == 'select') {
+                        elements[i].value = newVal
+                    } {
+                        elements[i].innerHTML = newVal;
+                    }
+                }
+            })
+
+            return pubSub;
+        }
+
+        function User(uid){
+            var binder = new DataBinder(uid);
+
+            user = {
+                attribute:{},
+                set: function(attrName,newVal){
+                    this.attribute[attrName] = newVal;
+                    binder.publish(uid+':change',attrName,newVal);
+                }
+            }
+
+            return user;
+        }
+
+        var u = new User('text');
+        u.set('name',123);
+    </script>
+</body>
+
+</html>
