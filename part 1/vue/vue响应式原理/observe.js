@@ -17,12 +17,12 @@ class Vue {
             get() {
 
             },
-            set(newValue) {
-                cb(key,newValue);
+            set() {
+                cb();
             }
         })
     }
-    _proxy(data,cb) {
+    _proxy(data) {
         var ctx = this;
         Object.keys(data).forEach(key => {
             Object.defineProperty(ctx, key,{
@@ -33,8 +33,10 @@ class Vue {
                 },
                 set(newValue){
                     ctx._data[key] = newValue;
+                    cb(key,newValue);
                 }
             })
+
         })
     }
 }
