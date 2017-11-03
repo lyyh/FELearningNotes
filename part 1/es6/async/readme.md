@@ -11,4 +11,14 @@ co模块约定，yield命令后面只能是 Thunk 函数或 Promise 对象，而
 4.返回值是 Promise。  
 async函数的返回值是 Promise 对象，这比 Generator 函数的返回值是 Iterator 对象方便多了。你可以用then方法指定下一步的操作。进一步说，async函数完全可以看作多个异步操作，包装成的一个 Promise 对象，而await命令就是内部then命令的语法糖。  
 
+## throw
+-   generator 抛出的错误即可以被函数体内部捕获，也可以被函数体外部捕获  
+-   generator throw 方法被捕获后会自动执行一次next  
+-   这种函数内部错误捕获机制，大大方便了对错误的处理。多个yield表达式，可以只用一个try...catch代码块来捕获错误。如果使用回调函数的写法，想要捕获多个错误，就不得不为每个函数内部写一个错误处理语句，现在只在 Generator 函数内部写一次catch语句就可以了。  
+-   一旦 Generator 执行过程中抛出错误，且没有被内部捕获，就不会再执行下去了。如果此后还调用next方法，将返回一个value属性等于undefined、done属性等于true的对象，即 JavaScript 引擎认为这个 Generator 已经运行结束了。  
+
+
+## trycatch
+内部使用的是 generator throw，所以可以使用 trycatch 来捕获错误
+
 
