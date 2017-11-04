@@ -4,59 +4,60 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+        (function () {
+            var documentElement = document.documentElement;
+
+            function callback() {
+                var clientWidth = documentElement.clientWidth;
+                clientWidth = clientWidth < 780 ? clientWidth : 780;
+                documentElement.style.fontSize = clientWidth / 10 + 'px';
+            }
+
+            document.addEventListener('DOMContentLoaded', callback);
+            window.addEventListener('orientationchange' in window ? 'orientationchange' : 'resize', callback);
+        })()
+    </script>
     <style>
-        .p1 {
-            font-size: 16px;
-            line-height: 32px;
+        .wrap {
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto;
+            background-color: red;
         }
 
-        .s1 {
-            font-size: 2em;
+        .form-group .text {
+            color: gray;
+            font-size: 2rem;
+            position: absolute;
+            top: 30px;
+            left: 30px;
         }
 
-        .s2 {
-            font-size: 2em;
-            line-height: 2em;
+        .control-focus .text {
+            color: pink;
+            transform: scale(0.8,0.8) translateY(-30px);
         }
 
-        .p2 {
-            font-size: 16px;
-            line-height: 2;
-        }
-
-        .s5 {
-            font-size: 2em;
-        }
-
-        .s6 {
-            font-size: 2em;
-            line-height: 2em;
-        }
-        .p3{
-            font-size: 20px;
-        }
-        .s7{
-            font-size: 16px;
-            width: 2em;
-            height: 2em;
+        .text{
+            transition-duration: 0.3s;
+            transition-property: color,transform;
         }
     </style>
 </head>
 
 <body>
-    <div class="p1">
-        <div class="s1">1</div>
-        <div class="s2">1</div>
+    <div class="form-group">
+        <span class='text'>hahah</span>
     </div>
-    <div class="p2">
-        <div class="s5">1</div>
-        <div class="s6">1</div>
-    </div>
-    <div class='p3'>
-        <div class='s7'>1</div>
-    </div>
+    <script>
+        var formGroupNode = document.querySelector('.form-group');
+        document.querySelector('.form-group .text').addEventListener('click', function (e) {
+          formGroupNode.className = formGroupNode.className + ' control-focus';
+        })
+    </script>
 </body>
 
 </html>
