@@ -6,3 +6,4 @@
 ## 同构
 不论是客户端渲染，还是服务端渲染，都有着其明显的缺陷，而同构显然是结合了二者优点之后的一种更好的解决方案。  
 
+![](https://github.com/lyyh/FELearningNotes/blob/master/public/images/part%202/%E6%8E%92%E5%BA%8F/sort-info.png) 
