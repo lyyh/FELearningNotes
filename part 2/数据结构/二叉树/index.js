@@ -96,11 +96,11 @@ function lastOrder(node) {
 }
 var bst = new BST();
 bst.insert(22);
-// bst.insert(10);
-// bst.insert(30);
-// bst.insert(22);
-// bst.insert(50);
+bst.insert(10);
+bst.insert(30);
+bst.insert(22);
+bst.insert(50);
 // console.log(bst)
-// console.log(bst.inOrder(bst.root));
-// console.log(bst.preOrder(bst.root));
-// console.log(bst.lastOrder(bst.root));
+console.log(bst.inOrder(bst.root));
+console.log(bst.preOrder(bst.root));
+console.log(bst.lastOrder(bst.root));

@@ -15,3 +15,4 @@ nRightIndex = 2* (nFatherIndex+1);
 
 ## 参考
 [详解javascript的实现方法](http://www.jb51.net/article/98512.htm)  
+[堆排序时间复杂度](https://chihminh.github.io/2016/08/08/heap-sort/)

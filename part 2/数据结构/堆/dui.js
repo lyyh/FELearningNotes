@@ -1,8 +1,8 @@
-function Heap() {
+function MinHeap() {
     this.data = [];
 }
 
-Heap.prototype = {
+MinHeap.prototype = {
     // 创建
     build: function (datas) {
         // 初始化
@@ -14,9 +14,9 @@ Heap.prototype = {
         for (var i = 0; i < datas.length; i++) {
             this.insert(datas[i]);
         }
-        return true;
+        return this.data;
     },
-    // 插入
+    // 最小堆插入
     insert: function (value) {
         if (!this.data instanceof Array) {
             this.data = [];
@@ -38,7 +38,7 @@ Heap.prototype = {
         return heap;
     },
     // 删除最大的节点
-    delete: function () {
+    deleteMax: function () {
         var heap = this.data;
         if (!this.data instanceof Array) {
             return null;
@@ -65,8 +65,8 @@ Heap.prototype = {
         return baseValue;
     }
 }
-var heapInit = new Heap();
+var heapInit = new MinHeap();
 var ret = heapInit.build([3, 2, 1, 4]);
 console.log(ret);
-heapInit.delete();
+heapInit.deleteMax();
 console.log(heapInit.data);
