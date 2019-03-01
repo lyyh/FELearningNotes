@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="box">
+        <button id="button">button</button>
+        <input type="text" id="input" value="input">
+    </div>
+<script src="index.js"></script>
+<script>
+    delegate('.box','#button','click',function (evt) {
+    	console.log(evt.target)
+        console.log(evt.target.nodeName)
+    })
+    delegate('.box','#input','input',function (evt) {
+        console.log(evt.target.nodeName)
+    })
+</script>
+</body>
+</html>
