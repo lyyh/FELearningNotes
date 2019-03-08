@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--flex 自动填充-->
+    <style>
+        html,body {
+            height: 100%;
+        }
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            background-color: gray;
+            flex: 1;
+        }
+        .footer{
+            background-color: #233140;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content"><!-- 页面主体内容区域 --></div>
+    <div class="footer"><!-- 需要做到 Sticky Footer 效果的页脚 --></div>
+</div>
+</body>
+</html>

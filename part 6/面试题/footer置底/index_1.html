@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--body margin-bottom + footer position 方式-->
+    <style>
+        html {
+          position: relative;
+          min-height: 100%;
+        }
+
+        body {
+          /* Margin bottom by footer height */
+          margin-bottom: 150px;
+        }
+
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 150px;
+            background-color: #233140;
+        }
+        p {
+            color: white;
+            margin-top: 30px;
+        }
+        .content{
+            height: 1500px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<div class="content"></div>
+<div class="footer">
+    <p class="text-center">Copyright ©2016 Rails101
+        <br>Design by liyangbin
+    </p>
+</div>
+</body>
+</html>
