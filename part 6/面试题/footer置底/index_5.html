@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+        .content{}
+        .footer {
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <!-- content -->
+    content
+</div>
+<div class="footer">footer</div>
+</body>
+</html>
