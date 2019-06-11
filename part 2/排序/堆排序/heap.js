@@ -9,23 +9,6 @@ function swap(v1, v2, context) {
 // 堆排序(最小堆)
 function heap(arr) {
 	let len = arr.length;
-	// let findMax = function (arr,x,len) {
-	// 	let l = 2 * x + 1;
-	// 	let r = 2 * x + 2;
-	// 	let largest = x;
-	//
-	// 	if (l < len && arr[l] > arr[largest]) {
-	// 		largest = l;
-	// 	}
-	//
-	// 	if (r < len && arr[r] > arr[largest]) {
-	// 		largest = r;
-	// 	}
-	//
-	// 	if (largest !== x) {
-	// 		swap(x, largest, arr);
-	// 	}
-	// }
 
 	let heapify = function (
 		arr // 待排序的数组

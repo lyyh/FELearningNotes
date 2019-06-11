@@ -44,33 +44,6 @@ function insert(data) {
     }
 }
 
-// function insert(data) {
-//     var n = new Node(data, null, null);
-//     if (this.root == null) {
-//         this.root = n;
-//     } else {
-//         var current = this.root;
-//         var parent = current;
-//         if (data < current.data) {
-//             current = current.left;
-//             if (current == null) {
-//                 parent.left = n;
-//                 return;
-//             }else{
-//                 insert(current);
-//             }
-//         } else {
-//             current = current.right;
-//             if (current == null) {
-//                 parent.right = n;
-//                 return;
-//             }else{
-//                 insert(current);
-//             }
-//         }
-//     }
-// }
-
 function inOrder(node) {
     if (node != null) {
         inOrder(node.left);
