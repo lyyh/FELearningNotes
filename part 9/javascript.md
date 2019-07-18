@@ -1,4 +1,11 @@
 ## 基础篇
 - [前端小智精华博客](https://github.com/qq449245884/xiaozhi)
 ## 进阶篇
-- [28个javascript技巧](https://juejin.im/post/5cef46226fb9a07eaf2b7516)
+- JS
+    - [八个问题看你是否懂js](https://juejin.im/post/5d2d146bf265da1b9163c5c9)
+    - [28个javascript技巧](https://juejin.im/post/5cef46226fb9a07eaf2b7516)
+- JSON
+    - [你所不知道的JSON.stringify](https://blog.fundebug.com/2017/08/17/what-you-didnt-know%20about-json-stringify/)
+    - [知乎JSON](https://www.zhihu.com/question/52965788)
+- lodash
+    - [关于拷贝原型污染的问题](https://juejin.im/post/5d271332f265da1b934e2d48)
