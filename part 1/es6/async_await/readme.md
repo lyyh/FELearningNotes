@@ -1,5 +1,6 @@
-# async 
+# async、await
 async,它就是 Generator 函数的语法糖。async函数就是将 Generator 函数的星号（*）替换成async，将yield替换成await  
+await,告诉浏览器不要马上执行下一行 js 语句，而是等待 async 函数返回的 promise 处理完毕再执行下一行语句。
 
 ## 相对于generator的改进
 1.内置执行器  
@@ -22,3 +23,12 @@ async函数的返回值是 Promise 对象，这比 Generator 函数的返回值�
 内部使用的是 generator throw，所以可以使用 trycatch 来捕获错误
 
 
+## 如果我们忘了使用 await 关键字会怎么样？
+如果你在调用一个 async 函数时忘了使用 await 关键字，那个函数还是会开始执行。这意味着，await 关键字对于函数执行不是必需的。async 函数会返回一个 promise，你可以稍后使用这个 promise。
+```
+(async () => {
+  const value = doSomeAsyncTask()
+  console.log(value) // an unresolved promise
+})()
+```
+另外一个后果是，编译器不会知道你想要等待这个函数完全执行完毕。因此，编译器会在完成异步任务之前就退出了程序。因此我们确实需要 await 关键字。
