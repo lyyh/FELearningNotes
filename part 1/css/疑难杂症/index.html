@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .demo{
+            width: 200px;
+            height: 200px;
+            transform: translate(100px,100px);
+            background: #f00;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            position: absolute;
+            /* position: fixed; */
+            top: 50px;
+            left: 20px;
+        }
+        .parent{
+            position: relative;
+        }
+        .father{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+    <style>
+        .container{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine
+        }
+        .front  { transform: rotateY(   0deg ) translateZ( 100px ); }
+        .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
+        .right  { transform: rotateY(  90deg ) translateZ( 100px ); }
+        .left   { transform: rotateY( -90deg ) translateZ( 100px ); }
+        .top    { transform: rotateX(  90deg ) translateZ( 100px ); }
+        .bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
+    </style>
+</head>
+<body>
+    <!-- <div class="demo">
+        <div class="parent">
+            <div class="father">
+                <div class="child"></div>
+            </div>
+        </div>
+    </div> -->
+    <section class="container">
+        <div id="cube">
+            <figure class="front">1</figure>
+            <figure class="back">2</figure>
+            <figure class="right">3</figure>
+            <figure class="left">4</figure>
+            <figure class="top">5</figure>
+            <figure class="bottom">6</figure>
+        </div>
+    </section>
+</body>
+</html>

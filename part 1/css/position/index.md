@@ -1,0 +1,2 @@
+## absolute 与 overflow 之间的限制规范
+absolute绝对定位元素，如果含有overflow不为visible的父级元素，同时，该父级元素以及到该绝对定位元素之间任何嵌套元素都没有position为非static属性的声明，则overflow对该absolute元素不起作用。

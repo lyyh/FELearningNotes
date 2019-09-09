@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 50vh;
+            transform: translateY(-50%)
+        }
+        .box-1 {
+            width: 500px;
+            height: 400px;
+            border: #b8b8b8 1px dashed;
+            position: relative;
+            margin: 0 auto;
+            top: 50%;
+        }
+        .box-1 .item {
+            display: inline-block;
+            background-color: aquamarine;
+            padding: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .wrap::after{
+            content: '\A';
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        相对于整个视窗居中
+    </div>
+    <div class='box-1'>
+        <div class="item">
+            <span class="wrap">position 和 transform 方式实现居中</span>
+            <span class="wrap">福就像穿鞋子 不舒服的 都只是脚镣</span>
+            <span class='wrap'>倒不如去赤脚奔跑</span>
+        </div>
+    </div>
+</body>
+</html>
