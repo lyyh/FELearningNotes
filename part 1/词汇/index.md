@@ -1,5 +1,6 @@
 ## 名称
 circular 循环
+enunm 枚举
 
 ## 形容词
 per 每一个
