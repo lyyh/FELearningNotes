@@ -35,8 +35,8 @@ class PromiseA{
 
 const p = new PromiseA(function (resolve,reject) {
     setTimeout(() => {
-        
+        new Error('23434')
         // resolve(111)
     }, 0);
-    throw new Error(123)
+    // throw new Error(123)
 })
