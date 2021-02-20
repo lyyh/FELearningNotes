@@ -19,7 +19,7 @@ class MyPromise {
         this._status = "RESOLVE";
         this._value = value
         let cb = this._resolveQueue.shift()
-        if(cb){
+        if (cb) {
 
         }
         while (cb = this._resolveQueue.shift()) {
@@ -36,13 +36,36 @@ class MyPromise {
     then(onFulFill, onReject) {
         const {
             _value,
-            _status
+            _status,
+            _resolveQueue,
+            _rejectQueue
         } = this
         return new MyPromise(function (onNextFulFill, onNextRejected) {
+            const fulfill = function () {
+                try {
+                    if (typeof onFulFill !== 'function') {
+                        onNextFulFill(_value)
+                    } else {
+                        var res = onFulFill(_value)
+                        if (res instanceof MyPromise) {
+                            res.then(onNextFulFill, onNextFulFill)
+                        } else {
+                            onNextFulFill(_value)
+                        }
+                    }
+                } catch (error) {
+                    onNextRejected(error)
+                }
+            }
+
+            const reject = function () {
+
+            }
+
             switch (_status) {
                 case 'PENDING':
-                    this._resolveQueue.push(onFulFill)
-                    this._rejectQueue.push(onReject)
+                    _resolveQueue.push(fulfill)
+                    _rejectQueue.push(reject)
                     break;
                 default:
                     break;

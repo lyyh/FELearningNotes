@@ -3,11 +3,15 @@ var sliceTasks = function (tasks, args, callback) {
         var task = tasks.shift()
         if (task) {
             task.apply(null, args || [])
+        }
+
+        if (tasks.length) {
             setTimeout(run, 16);
         } else {
             callback()
         }
     }
+    
 
     setTimeout(run);
 }

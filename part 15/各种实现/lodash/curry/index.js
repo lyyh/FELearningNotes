@@ -24,4 +24,4 @@ var addAll = (a, b, c) => {
 }
 
 var curryFn = curry(addAll)
-console.log(curryFn(1, 2, 3))
+console.log(curryFn(1, 2)(3))
