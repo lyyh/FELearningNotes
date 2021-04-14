@@ -92,6 +92,32 @@ var quick_sort = function (nums, left, right) {
     return nums
 }
 
+
+var quick_sort = function (nums, left, right) {
+    if (left < right) {
+        var start = left,
+            end = right
+        var pivot = nums[start]
+        while (start < end) {
+            while (start < end && nums[end] >= pivot) {
+                end--
+            }
+            if (start < end) {
+                nums[start++] = nums[end]
+            }
+            while (start < end && nums[start] < pivot) {
+                start++
+            }
+            if (start < end) {
+                nums[end--] = nums[start]
+            }
+        }
+        nums[start] = pivot
+        quick_sort(nums, start + 1, right)
+        quick_sort(nums, left,start - 1 )
+    }
+    return nums
+}
 console.log(quick_sort([2, 1, 3, 6, 3, 2, 7, 4], 0, 7))
 // var partition = function (nums, left, right) {
 //     // var mid = left + ((right - left) >> 1)
